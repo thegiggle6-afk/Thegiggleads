@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="google-site-verification" content="HAUEv9e_H4oir3OI0MAUt3DRxsNTqOmzoosCV2G4nTQ" />
+    <meta name="google-site-verification" content="HAUEv9e_H4oir3OI0MAUt3DRxsNTqOmzoosCV2G4nTQ" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,22 +9,23 @@
     <meta name="description" content="TheGiggle is Agra's leading digital marketing agency, offering SEO, Social Media Marketing, 3D Web Design, Logo Design, and E-commerce growth services. Contact us today.">
     <meta name="keywords" content="Digital Marketing Agency Agra, Best SEO Company Agra, TheGiggle Agra, Ajay Sikarwar, Social Media Marketing Agra, Web Development Agra, Logo Design Agra, E-commerce Agra">
     <meta name="author" content="Ajay Sikarwar">
-    <link rel="canonical" href="https://thegiggle.netlify.app/">
+    
+    <link rel="canonical" href="https://thegiggle6-afk.github.io/Thegiggleads/">
 
     <meta property="og:title" content="TheGiggle | Top Digital Marketing Agency in Agra">
     <meta property="og:description" content="Boost your brand with Agra's most creative digital agency. Expert in SEO, Social Media, Web Design, and E-commerce growth.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://thegiggle.netlify.app/">
-    <meta property="og:image" content="https://thegiggle.netlify.app/my-photo.jpg">
+    <meta property="og:url" content="https://thegiggle6-afk.github.io/Thegiggleads/">
+    <meta property="og:image" content="https://thegiggle6-afk.github.io/Thegiggleads/my-photo.jpg">
 
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "TheGiggle Digital Marketing Agency",
-      "image": "https://thegiggle.netlify.app/my-photo.jpg",
-      "@id": "https://thegiggle.netlify.app/",
-      "url": "https://thegiggle.netlify.app/",
+      "image": "https://thegiggle6-afk.github.io/Thegiggleads/my-photo.jpg",
+      "@id": "https://thegiggle6-afk.github.io/Thegiggleads/",
+      "url": "https://thegiggle6-afk.github.io/Thegiggleads/",
       "telephone": "+919193738863",
       "email": "ajaydd111@gmail.com",
       "description": "TheGiggle is Agra's premier digital marketing agency specializing in SEO, web design, social media marketing, and e-commerce growth.",
@@ -70,7 +71,6 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
         html { scroll-behavior: smooth; }
 
         body {
@@ -78,6 +78,16 @@
             color: var(--text);
             font-family: 'Outfit', sans-serif;
             overflow-x: hidden;
+            /* ANIMATED BACKGROUND GRADIENT */
+            background: linear-gradient(45deg, #000000, #0a0a0a, #001214, #000000);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         ::-webkit-scrollbar { width: 4px; }
@@ -136,19 +146,6 @@
             color: #000 !important;
         }
 
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 5px;
-        }
-        .hamburger span {
-            width: 24px; height: 2px;
-            background: var(--primary);
-            border-radius: 2px;
-            transition: 0.3s;
-        }
-
         section {
             min-height: 100vh;
             padding: 120px 10% 80px;
@@ -188,6 +185,13 @@
             text-transform: uppercase;
             margin-bottom: 30px;
             background: rgba(0,242,255,0.05);
+            animation: pulse-border 2s infinite;
+        }
+
+        @keyframes pulse-border {
+            0% { border-color: rgba(0,242,255,0.4); }
+            50% { border-color: rgba(0,242,255,1); }
+            100% { border-color: rgba(0,242,255,0.4); }
         }
 
         .hero h1 {
@@ -231,21 +235,6 @@
             border: none;
             box-shadow: 0 4px 20px rgba(0,242,255,0.3);
         }
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 35px rgba(0,242,255,0.5);
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: var(--text);
-            border: 1px solid rgba(255,255,255,0.2);
-        }
-        .btn-outline:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-            transform: translateY(-3px);
-        }
 
         .stats-row {
             display: flex;
@@ -257,16 +246,12 @@
             border-top: 1px solid rgba(255,255,255,0.06);
         }
 
-        .stat { text-align: center; }
         .stat-num {
             font-family: 'Syncopate', sans-serif;
             font-size: 2rem;
             color: var(--primary);
             display: block;
         }
-        .stat-label { font-size: 0.72rem; color: var(--text-muted); letter-spacing: 2px; text-transform: uppercase; }
-
-        #services { background: rgba(0,0,0,0.3); }
 
         .services-grid {
             display: grid;
@@ -281,71 +266,44 @@
             padding: 36px 24px;
             border-radius: 20px;
             text-align: left;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
-            cursor: pointer;
             text-decoration: none;
             display: block;
             color: inherit;
         }
 
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            opacity: 0;
-            transition: opacity 0.4s;
-        }
-
-        .card:hover {
-            border-color: rgba(0,242,255,0.3);
-            background: rgba(0,242,255,0.06);
-            transform: translateY(-8px);
-            box-shadow: 0 20px 60px rgba(0,242,255,0.1);
-        }
-
-        .card:hover::before { opacity: 1; }
-
+        /* 3D ICON ANIMATION */
         .card-icon {
             width: 52px; height: 52px;
             background: rgba(0,242,255,0.1);
             border-radius: 14px;
             display: flex; align-items: center; justify-content: center;
             margin-bottom: 20px;
-            transition: background 0.4s;
-        }
-        .card:hover .card-icon { background: rgba(0,242,255,0.2); }
-
-        .card-icon i {
-            font-size: 1.5rem;
-            color: var(--primary);
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: floatIcon 3s ease-in-out infinite;
         }
 
-        .card h3 {
-            font-size: 1rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            color: var(--text);
+        @keyframes floatIcon {
+            0%, 100% { transform: translateY(0) rotate(0); }
+            50% { transform: translateY(-10px) rotate(5deg); }
         }
 
-        .card p {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            line-height: 1.65;
+        .card:hover {
+            border-color: rgba(0,242,255,0.5);
+            background: rgba(0,242,255,0.08);
+            transform: perspective(1000px) rotateX(5deg) translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,242,255,0.15);
         }
 
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.3fr;
-            gap: 60px;
-            align-items: center;
-            margin-top: 20px;
+        .card:hover .card-icon {
+            background: var(--primary);
+            color: #000;
+            transform: scale(1.1) rotate(10deg);
         }
 
-        .about-img-wrap { position: relative; }
+        .card:hover .card-icon i { color: #000; }
 
         .about-img {
             width: 100%;
@@ -353,124 +311,12 @@
             border: 2px solid rgba(0,242,255,0.4);
             box-shadow: 0 0 40px rgba(0,242,255,0.15);
             display: block;
+            animation: floatImg 6s ease-in-out infinite;
         }
 
-        .about-img-badge {
-            position: absolute;
-            bottom: -16px; right: -16px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: #fff;
-            padding: 14px 20px;
-            border-radius: 16px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-align: center;
-            line-height: 1.4;
-        }
-
-        .about-content h2 { margin-bottom: 20px; }
-
-        .about-content p {
-            color: var(--text-muted);
-            line-height: 1.8;
-            margin-bottom: 16px;
-            font-size: 0.95rem;
-        }
-
-        .about-skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin: 24px 0 32px;
-        }
-
-        .skill-tag {
-            padding: 6px 16px;
-            border: 1px solid rgba(0,242,255,0.3);
-            border-radius: 50px;
-            font-size: 0.75rem;
-            color: var(--primary);
-            background: rgba(0,242,255,0.05);
-        }
-
-        #why { background: rgba(0,0,0,0.2); }
-
-        .why-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 24px;
-            margin-top: 50px;
-        }
-
-        .why-card {
-            padding: 30px;
-            border-radius: 18px;
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-        }
-
-        .why-num {
-            font-family: 'Syncopate', sans-serif;
-            font-size: 2.5rem;
-            color: rgba(0,242,255,0.15);
-            font-weight: 700;
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        .why-card h3 {
-            font-size: 1rem;
-            margin-bottom: 10px;
-            color: var(--text);
-        }
-
-        .why-card p {
-            font-size: 0.83rem;
-            color: var(--text-muted);
-            line-height: 1.65;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 50px;
-            margin-top: 50px;
-            align-items: start;
-        }
-
-        .contact-info h3 {
-            font-size: 1.1rem;
-            margin-bottom: 30px;
-            color: var(--text);
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 16px;
-            margin-bottom: 24px;
-        }
-
-        .contact-item-icon {
-            width: 42px; height: 42px;
-            background: rgba(0,242,255,0.1);
-            border-radius: 12px;
-            display: flex; align-items: center; justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .contact-item-icon i { color: var(--primary); font-size: 1rem; }
-
-        .contact-item-text { font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; }
-        .contact-item-text strong { color: var(--text); display: block; font-size: 0.8rem; margin-bottom: 2px; letter-spacing: 1px; text-transform: uppercase; }
-
-        .map-wrap {
-            margin-top: 24px;
-            border-radius: 16px;
-            overflow: hidden;
-            border: 1px solid rgba(0,242,255,0.2);
-            height: 180px;
+        @keyframes floatImg {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
         }
 
         .contact-form {
@@ -478,51 +324,8 @@
             border: 1px solid var(--card-border);
             border-radius: 24px;
             padding: 36px;
+            backdrop-filter: blur(10px);
         }
-
-        .contact-form h3 {
-            font-size: 1.1rem;
-            margin-bottom: 24px;
-        }
-
-        .form-group { margin-bottom: 16px; }
-
-        .form-group label {
-            display: block;
-            font-size: 0.72rem;
-            color: var(--text-muted);
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            margin-bottom: 8px;
-        }
-
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 14px 18px;
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.1);
-            color: var(--text);
-            border-radius: 12px;
-            font-family: 'Outfit', sans-serif;
-            font-size: 0.9rem;
-            transition: border-color 0.3s;
-            outline: none;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            border-color: var(--primary);
-            background: rgba(0,242,255,0.04);
-        }
-
-        .form-group select option { background: #111; }
-
-        .form-group textarea { resize: vertical; min-height: 110px; }
-
-        .honeypot { display: none !important; visibility: hidden; position: absolute; }
 
         footer {
             padding: 30px 10%;
@@ -530,62 +333,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 16px;
+            background: rgba(0,0,0,0.9);
         }
 
-        footer p { font-size: 0.78rem; color: var(--text-muted); }
-
-        .footer-links { display: flex; gap: 20px; }
-        .footer-links a {
-            font-size: 0.78rem;
-            color: var(--text-muted);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        .footer-links a:hover { color: var(--primary); }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-12px); }
-        }
-
-        @keyframes pulse-glow {
-            0%, 100% { box-shadow: 0 0 20px rgba(0,242,255,0.2); }
-            50% { box-shadow: 0 0 50px rgba(0,242,255,0.5); }
-        }
-
-        @media (max-width: 900px) {
-            .about-grid { grid-template-columns: 1fr; }
-            .about-img-badge { right: 0; }
-            .contact-grid { grid-template-columns: 1fr; }
-        }
-
+        /* MOBILE FIX */
         @media (max-width: 768px) {
             nav { padding: 16px 6%; }
-            section { padding: 100px 6% 60px; }
-
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0; right: 0;
-                background: rgba(0,0,0,0.97);
-                flex-direction: column;
-                padding: 20px;
-                gap: 16px;
-                border-bottom: 1px solid rgba(0,242,255,0.1);
-            }
-            .nav-links.open { display: flex; }
-            .hamburger { display: flex; }
-
-            .stats-row { gap: 24px; }
-            footer { flex-direction: column; text-align: center; }
-        }
-
-        @media (max-width: 480px) {
-            .hero-btns { flex-direction: column; align-items: center; }
-            .services-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
         }
     </style>
 </head>
@@ -598,47 +352,29 @@
 
     <nav id="navbar">
         <a href="#home" class="logo">THEGIGGLE</a>
-        <div class="nav-links" id="navLinks">
+        <div class="nav-links">
             <a href="#services">Services</a>
             <a href="#about">About</a>
             <a href="#why">Why Us</a>
             <a href="#contact" class="nav-cta">Get a Quote</a>
         </div>
-        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-            <span></span><span></span><span></span>
-        </div>
     </nav>
 
     <section id="home" class="hero">
-        <div data-aos="fade-up" data-aos-duration="800">
+        <div data-aos="fade-up">
             <div class="hero-badge">🚀 Agra's Leading Digital Agency</div>
             <h1>GROW YOUR BRAND<br><span>DIGITALLY</span></h1>
-            <p class="hero-sub">
-                TheGiggle helps Agra's businesses get real results — more visibility, more leads, and more sales through smart digital marketing.
-            </p>
+            <p class="hero-sub">TheGiggle helps Agra's businesses get real results through immersive 3D web design and data-backed marketing.</p>
             <div class="hero-btns">
                 <a href="#contact" class="btn btn-primary">Get Free Consultation</a>
                 <a href="#services" class="btn btn-outline">Our Services</a>
             </div>
         </div>
 
-        <div class="stats-row" data-aos="fade-up" data-aos-delay="200">
-            <div class="stat">
-                <span class="stat-num">50+</span>
-                <span class="stat-label">Projects Done</span>
-            </div>
-            <div class="stat">
-                <span class="stat-num">30+</span>
-                <span class="stat-label">Happy Clients</span>
-            </div>
-            <div class="stat">
-                <span class="stat-num">3x</span>
-                <span class="stat-label">Avg. Growth</span>
-            </div>
-            <div class="stat">
-                <span class="stat-num">24/7</span>
-                <span class="stat-label">Support</span>
-            </div>
+        <div class="stats-row" data-aos="fade-up">
+            <div class="stat"><span class="stat-num">50+</span><p class="stat-label">Projects</p></div>
+            <div class="stat"><span class="stat-num">30+</span><p class="stat-label">Clients</p></div>
+            <div class="stat"><span class="stat-num">3x</span><p class="stat-label">Growth</p></div>
         </div>
     </section>
 
@@ -646,242 +382,68 @@
         <div data-aos="fade-up">
             <p class="section-label">What We Do</p>
             <h2 class="section-title">OUR <span>SERVICES</span></h2>
-            <p style="color: var(--text-muted); max-width: 540px; line-height: 1.7; font-size: 0.95rem;">
-                From getting you found on Google to turning your visitors into paying customers — we handle the full digital journey.
-            </p>
         </div>
 
         <div class="services-grid">
-
-            <!-- SEO -->
-            <a href="seo-optimization.html" class="card" data-aos="fade-up" data-aos-delay="0">
+            <a href="seo-optimization.html" class="card" data-aos="fade-up">
                 <div class="card-icon"><i class="fas fa-search-location"></i></div>
                 <h3>SEO Optimization</h3>
-                <p>We get your business to the top of Google search results in Agra. Our local SEO strategies drive real traffic from people who are actively looking for your services.</p>
+                <p>Dominate Google search results in Agra with our local SEO strategies.</p>
             </a>
-
-            <!-- Web Design -->
-            <a href="web-design.html" class="card" data-aos="fade-up" data-aos-delay="80">
+            <a href="web-design.html" class="card" data-aos="fade-up" data-aos-delay="100">
                 <div class="card-icon"><i class="fas fa-cubes"></i></div>
                 <h3>3D Web Design</h3>
-                <p>We build modern, fast, and visually stunning websites with 3D animations that make your brand stand out and leave a lasting first impression on every visitor.</p>
+                <p>Immersive websites with 3D animations that leave a lasting impression.</p>
             </a>
-
-            <!-- Social Media -->
-            <a href="social-media.html" class="card" data-aos="fade-up" data-aos-delay="160">
+            <a href="social-media.html" class="card" data-aos="fade-up" data-aos-delay="200">
                 <div class="card-icon"><i class="fas fa-bullhorn"></i></div>
                 <h3>Social Media Marketing</h3>
-                <p>We manage your Facebook and Instagram presence — from content creation to paid ads — to build a loyal audience and generate consistent leads for your business.</p>
+                <p>Strategic management and paid ads for Facebook & Instagram.</p>
             </a>
-
-            <!-- Video Content -->
-            <a href="video-content.html" class="card" data-aos="fade-up" data-aos-delay="240">
+            <a href="video-content.html" class="card" data-aos="fade-up" data-aos-delay="300">
                 <div class="card-icon"><i class="fas fa-clapperboard"></i></div>
                 <h3>Reels & Video Content</h3>
-                <p>High-quality short video content and Instagram Reels produced specifically for your brand. Engaging, scroll-stopping videos that grow your reach organically.</p>
+                <p>Scroll-stopping viral content produced specifically for your brand.</p>
             </a>
-
-            <!-- E-commerce -->
-            <a href="e-commerce-growth.html" class="card" data-aos="fade-up" data-aos-delay="0">
-                <div class="card-icon"><i class="fas fa-shop"></i></div>
-                <h3>E-commerce Growth</h3>
-                <p>We help Agra-based sellers grow on Meesho and Amazon — optimizing product listings, pricing strategies, and ad campaigns to maximize your online sales.</p>
-            </a>
-
-            <!-- Branding -->
-            <a href="branding-design.html" class="card" data-aos="fade-up" data-aos-delay="80">
-                <div class="card-icon"><i class="fas fa-pen-nib"></i></div>
-                <h3>Logo & Brand Design</h3>
-                <p>We create professional logos and complete brand identity packages that reflect your business values and make you look credible and trustworthy to customers.</p>
-            </a>
-
-            <!-- App Design -->
-            <a href="app-design.html" class="card" data-aos="fade-up" data-aos-delay="160">
-                <div class="card-icon"><i class="fas fa-mobile-screen-button"></i></div>
-                <h3>App UI/UX Design</h3>
-                <p>We design clean, user-friendly app interfaces and prototypes that offer great user experience — making it easier to present your app idea to investors or developers.</p>
-            </a>
-
-            <!-- Business Strategy -->
-            <a href="bussinees-strategy.html" class="card" data-aos="fade-up" data-aos-delay="240">
-                <div class="card-icon"><i class="fas fa-chart-line"></i></div>
-                <h3>Business Growth Strategy</h3>
-                <p>We work with you to build a custom digital growth plan — identifying the right channels, audience, and content strategy to scale your Agra business effectively.</p>
-            </a>
-
         </div>
     </section>
 
     <section id="about">
-        <div data-aos="fade-up">
-            <p class="section-label">Who We Are</p>
-        </div>
         <div class="about-grid">
             <div class="about-img-wrap" data-aos="fade-right">
-                <img src="my-photo.jpg" class="about-img" alt="Ajay Sikarwar - Founder of TheGiggle Digital Marketing Agency Agra"
-                     onerror="this.src='https://via.placeholder.com/400x500/0a0a1a/00f2ff?text=Ajay+Sikarwar'">
-                <div class="about-img-badge" style="animation: pulse-glow 3s infinite;">
-                    FOUNDER<br>TheGiggle
-                </div>
+                <img src="my-photo.jpg" class="about-img" alt="Ajay Sikarwar">
+                <div class="about-img-badge">FOUNDER<br>TheGiggle</div>
             </div>
-            <div data-aos="fade-left">
+            <div class="about-content" data-aos="fade-left">
                 <h2 class="section-title">AJAY <span>SIKARWAR</span></h2>
-                <p>
-                    Ajay Sikarwar is a digital entrepreneur and the founder of TheGiggle — a results-driven digital marketing agency based in Agra, Uttar Pradesh.
-                </p>
-                <p>
-                    With deep expertise in SEO, social media growth, and web design, Ajay has helped local businesses in Agra build a strong online presence and reach new customers through smart digital strategies.
-                </p>
-                <p>
-                    TheGiggle's vision is simple: take Agra's best brands to a national audience using modern, data-backed marketing — without the fluff.
-                </p>
+                <p>Founder of TheGiggle, specializing in taking Agra's local brands to a national audience through futuristic tech and digital asset management.</p>
                 <div class="about-skills">
-                    <span class="skill-tag">SEO Strategy</span>
-                    <span class="skill-tag">Social Media</span>
-                    <span class="skill-tag">3D Web Design</span>
-                    <span class="skill-tag">E-commerce</span>
-                    <span class="skill-tag">Video Marketing</span>
-                    <span class="skill-tag">Brand Identity</span>
+                    <span class="skill-tag">SEO</span><span class="skill-tag">3D Web</span><span class="skill-tag">E-com</span>
                 </div>
-                <div style="display:flex; gap:14px; flex-wrap:wrap;">
-                    <a href="#contact" class="btn btn-primary">Work With Us</a>
-                    <a href="https://instagram.com/mr_ajaysikarwar" target="_blank" rel="noopener" class="btn btn-outline">
-                        <i class="fab fa-instagram" style="margin-right:8px;"></i>Instagram
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="why">
-        <div data-aos="fade-up">
-            <p class="section-label">Why Choose Us</p>
-            <h2 class="section-title">WHY <span>THEGIGGLE</span></h2>
-            <p style="color: var(--text-muted); max-width: 540px; line-height: 1.7; font-size: 0.95rem;">
-                We are not just another agency. Here is what makes us different for Agra businesses.
-            </p>
-        </div>
-        <div class="why-grid">
-            <div class="why-card" data-aos="fade-up" data-aos-delay="0">
-                <span class="why-num">01</span>
-                <h3>Local Market Expertise</h3>
-                <p>We understand Agra's market deeply — what works here, who your customers are, and how to reach them effectively online.</p>
-            </div>
-            <div class="why-card" data-aos="fade-up" data-aos-delay="100">
-                <span class="why-num">02</span>
-                <h3>Results First Approach</h3>
-                <p>We focus on real outcomes — more website traffic, more inquiries, more sales. Not just follower counts and vanity metrics.</p>
-            </div>
-            <div class="why-card" data-aos="fade-up" data-aos-delay="200">
-                <span class="why-num">03</span>
-                <h3>Transparent Communication</h3>
-                <p>You always know what we are working on and why. Clear reporting, honest timelines, and direct communication — no surprises.</p>
-            </div>
-            <div class="why-card" data-aos="fade-up" data-aos-delay="300">
-                <span class="why-num">04</span>
-                <h3>Affordable for Local Businesses</h3>
-                <p>Professional digital marketing should not be out of reach for small businesses. Our packages are designed specifically for Agra's market budget.</p>
+                <a href="#contact" class="btn btn-primary">Work With Us</a>
             </div>
         </div>
     </section>
 
     <section id="contact">
-        <div data-aos="fade-up">
-            <p class="section-label">Get In Touch</p>
-            <h2 class="section-title">CONTACT <span>US</span></h2>
-            <p style="color: var(--text-muted); max-width: 540px; line-height: 1.7; font-size: 0.95rem;">
-                Ready to grow your business? Send us a message and we will get back to you within 24 hours.
-            </p>
-        </div>
-
         <div class="contact-grid">
             <div class="contact-info" data-aos="fade-right">
-                <h3>Reach Us Directly</h3>
-
+                <h2 class="section-title">CONTACT <span>US</span></h2>
                 <div class="contact-item">
                     <div class="contact-item-icon"><i class="fas fa-phone"></i></div>
-                    <div class="contact-item-text">
-                        <strong>Phone / WhatsApp</strong>
-                        <a href="tel:+919193738863" style="color:var(--text-muted); text-decoration:none;">+91 91937 38863</a>
-                    </div>
+                    <div class="contact-item-text"><strong>WhatsApp</strong>+91 91937 38863</div>
                 </div>
-
-                <div class="contact-item">
-                    <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
-                    <div class="contact-item-text">
-                        <strong>Email</strong>
-                        <a href="mailto:ajaydd111@gmail.com" style="color:var(--text-muted); text-decoration:none;">ajaydd111@gmail.com</a>
-                    </div>
-                </div>
-
                 <div class="contact-item">
                     <div class="contact-item-icon"><i class="fas fa-location-dot"></i></div>
-                    <div class="contact-item-text">
-                        <strong>Office</strong>
-                        03 Manubhihar Colony, Dehtora, Agra, UP — 282007
-                    </div>
-                </div>
-
-                <div class="contact-item">
-                    <div class="contact-item-icon"><i class="fas fa-clock"></i></div>
-                    <div class="contact-item-text">
-                        <strong>Working Hours</strong>
-                        Monday – Saturday, 9:00 AM – 8:00 PM
-                    </div>
-                </div>
-
-                <div class="map-wrap">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3549.363654492211!2d77.942!3d27.176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397477610a200001%3A0xcb0656096531390e!2sAgra%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1714730000000!5m2!1sen!2sin"
-                        width="100%" height="100%" style="border:0;" loading="lazy"
-                        title="TheGiggle Office Location Agra">
-                    </iframe>
+                    <div class="contact-item-text"><strong>Agra Office</strong>03 Manubhihar Colony, Dehtora</div>
                 </div>
             </div>
-
             <div class="contact-form" data-aos="fade-left">
-                <h3>Send Us a Message</h3>
                 <form action="https://formspree.io/f/mqkrpvyv" method="POST">
-                    <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off">
-
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="service">Service Needed</label>
-                        <select id="service" name="service">
-                            <option value="">Select a service</option>
-                            <option>SEO Optimization</option>
-                            <option>3D Web Design</option>
-                            <option>Social Media Marketing</option>
-                            <option>Reels & Video Content</option>
-                            <option>E-commerce Growth</option>
-                            <option>Logo & Brand Design</option>
-                            <option>App UI/UX Design</option>
-                            <option>Business Growth Strategy</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Your Message</label>
-                        <textarea id="message" name="message" placeholder="Tell us about your business and what you want to achieve..." required></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary" style="width:100%; text-align:center;">
-                        Send Inquiry <i class="fas fa-arrow-right" style="margin-left:8px;"></i>
-                    </button>
+                    <div class="form-group"><label>Your Name</label><input type="text" name="name" required></div>
+                    <div class="form-group"><label>Email</label><input type="email" name="email" required></div>
+                    <div class="form-group"><label>Message</label><textarea name="message" required></textarea></div>
+                    <button type="submit" class="btn btn-primary" style="width:100%">Send Inquiry</button>
                 </form>
             </div>
         </div>
@@ -890,51 +452,17 @@
     <footer>
         <p>© 2026 TheGiggle | Digital Marketing Agency, Agra</p>
         <div class="footer-links">
-            <a href="#home">Home</a>
-            <a href="#services">Services</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-            <a href="https://instagram.com/mr_ajaysikarwar" target="_blank" rel="noopener">
-                <i class="fab fa-instagram"></i>
-            </a>
+            <a href="https://instagram.com/mr_ajaysikarwar" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 800, once: true, offset: 60 });
-
-        function toggleMenu() {
-            const nav = document.getElementById('navLinks');
-            const ham = document.getElementById('hamburger');
-            nav.classList.toggle('open');
-            ham.classList.toggle('active');
-        }
-
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                document.getElementById('navLinks').classList.remove('open');
-                document.getElementById('hamburger').classList.remove('active');
-            });
-        });
-
+        AOS.init({ duration: 800, once: true });
         window.addEventListener('scroll', () => {
             const nav = document.getElementById('navbar');
             nav.style.padding = window.scrollY > 50 ? '12px 8%' : '18px 8%';
         });
-
-        const form = document.querySelector('form');
-        if (form) {
-            form.addEventListener('submit', function(e) {
-                const btn = form.querySelector('button[type="submit"]');
-                btn.textContent = 'Sending...';
-                btn.disabled = true;
-                setTimeout(() => {
-                    btn.innerHTML = 'Sent! We\'ll contact you soon ✓';
-                    btn.style.background = 'linear-gradient(135deg, #00c851, #007e33)';
-                }, 1500);
-            });
-        }
     </script>
 </body>
 </html>
