@@ -80,19 +80,16 @@
             overflow-x: hidden;
         }
 
-        /* ─── SCROLLBAR ─── */
         ::-webkit-scrollbar { width: 4px; }
         ::-webkit-scrollbar-track { background: #000; }
         ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 2px; }
 
-        /* ─── BG ─── */
         #bg-box {
             position: fixed; top: 0; left: 0;
             width: 100%; height: 100%; z-index: -1;
             opacity: 0.6;
         }
 
-        /* ─── NAV ─── */
         nav {
             position: fixed; top: 0; width: 100%;
             padding: 18px 8%;
@@ -139,7 +136,6 @@
             color: #000 !important;
         }
 
-        /* ─── HAMBURGER ─── */
         .hamburger {
             display: none;
             flex-direction: column;
@@ -153,7 +149,6 @@
             transition: 0.3s;
         }
 
-        /* ─── SECTIONS ─── */
         section {
             min-height: 100vh;
             padding: 120px 10% 80px;
@@ -180,7 +175,6 @@
 
         .section-title span { color: var(--primary); text-shadow: var(--glow); }
 
-        /* ─── HERO ─── */
         .hero { text-align: center; align-items: center; }
 
         .hero-badge {
@@ -253,7 +247,6 @@
             transform: translateY(-3px);
         }
 
-        /* ─── STATS ─── */
         .stats-row {
             display: flex;
             gap: 40px;
@@ -273,7 +266,6 @@
         }
         .stat-label { font-size: 0.72rem; color: var(--text-muted); letter-spacing: 2px; text-transform: uppercase; }
 
-        /* ─── SERVICES ─── */
         #services { background: rgba(0,0,0,0.3); }
 
         .services-grid {
@@ -292,6 +284,10 @@
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             position: relative;
             overflow: hidden;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            color: inherit;
         }
 
         .card::before {
@@ -341,7 +337,6 @@
             line-height: 1.65;
         }
 
-        /* ─── ABOUT ─── */
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1.3fr;
@@ -399,7 +394,6 @@
             background: rgba(0,242,255,0.05);
         }
 
-        /* ─── WHY US ─── */
         #why { background: rgba(0,0,0,0.2); }
 
         .why-grid {
@@ -437,7 +431,6 @@
             line-height: 1.65;
         }
 
-        /* ─── CONTACT ─── */
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1.2fr;
@@ -480,7 +473,6 @@
             height: 180px;
         }
 
-        /* ─── FORM ─── */
         .contact-form {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
@@ -532,7 +524,6 @@
 
         .honeypot { display: none !important; visibility: hidden; position: absolute; }
 
-        /* ─── FOOTER ─── */
         footer {
             padding: 30px 10%;
             border-top: 1px solid rgba(255,255,255,0.06);
@@ -554,7 +545,6 @@
         }
         .footer-links a:hover { color: var(--primary); }
 
-        /* ─── ANIMATIONS ─── */
         @keyframes float {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-12px); }
@@ -565,7 +555,6 @@
             50% { box-shadow: 0 0 50px rgba(0,242,255,0.5); }
         }
 
-        /* ─── RESPONSIVE ─── */
         @media (max-width: 900px) {
             .about-grid { grid-template-columns: 1fr; }
             .about-img-badge { right: 0; }
@@ -602,13 +591,11 @@
 </head>
 <body>
 
-    <!-- 3D Animated Background -->
     <div id="bg-box">
         <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.28/build/spline-viewer.js"></script>
         <spline-viewer url="https://prod.spline.design/6Wq1Q7YEBCjYvS66/scene.splinecode"></spline-viewer>
     </div>
 
-    <!-- Navigation -->
     <nav id="navbar">
         <a href="#home" class="logo">THEGIGGLE</a>
         <div class="nav-links" id="navLinks">
@@ -622,7 +609,6 @@
         </div>
     </nav>
 
-    <!-- Hero -->
     <section id="home" class="hero">
         <div data-aos="fade-up" data-aos-duration="800">
             <div class="hero-badge">🚀 Agra's Leading Digital Agency</div>
@@ -656,7 +642,6 @@
         </div>
     </section>
 
-    <!-- Services -->
     <section id="services">
         <div data-aos="fade-up">
             <p class="section-label">What We Do</p>
@@ -667,50 +652,66 @@
         </div>
 
         <div class="services-grid">
-            <div class="card" data-aos="fade-up" data-aos-delay="0">
+
+            <!-- SEO -->
+            <a href="seo-optimization.html" class="card" data-aos="fade-up" data-aos-delay="0">
                 <div class="card-icon"><i class="fas fa-search-location"></i></div>
                 <h3>SEO Optimization</h3>
                 <p>We get your business to the top of Google search results in Agra. Our local SEO strategies drive real traffic from people who are actively looking for your services.</p>
-            </div>
-            <div class="card" data-aos="fade-up" data-aos-delay="80">
+            </a>
+
+            <!-- Web Design -->
+            <a href="web-design.html" class="card" data-aos="fade-up" data-aos-delay="80">
                 <div class="card-icon"><i class="fas fa-cubes"></i></div>
                 <h3>3D Web Design</h3>
                 <p>We build modern, fast, and visually stunning websites with 3D animations that make your brand stand out and leave a lasting first impression on every visitor.</p>
-            </div>
-            <div class="card" data-aos="fade-up" data-aos-delay="160">
+            </a>
+
+            <!-- Social Media -->
+            <a href="social-media.html" class="card" data-aos="fade-up" data-aos-delay="160">
                 <div class="card-icon"><i class="fas fa-bullhorn"></i></div>
                 <h3>Social Media Marketing</h3>
                 <p>We manage your Facebook and Instagram presence — from content creation to paid ads — to build a loyal audience and generate consistent leads for your business.</p>
-            </div>
-            <div class="card" data-aos="fade-up" data-aos-delay="240">
+            </a>
+
+            <!-- Video Content -->
+            <a href="video-content.html" class="card" data-aos="fade-up" data-aos-delay="240">
                 <div class="card-icon"><i class="fas fa-clapperboard"></i></div>
                 <h3>Reels & Video Content</h3>
                 <p>High-quality short video content and Instagram Reels produced specifically for your brand. Engaging, scroll-stopping videos that grow your reach organically.</p>
-            </div>
-            <div class="card" data-aos="fade-up" data-aos-delay="0">
+            </a>
+
+            <!-- E-commerce -->
+            <a href="e-commerce-growth.html" class="card" data-aos="fade-up" data-aos-delay="0">
                 <div class="card-icon"><i class="fas fa-shop"></i></div>
                 <h3>E-commerce Growth</h3>
                 <p>We help Agra-based sellers grow on Meesho and Amazon — optimizing product listings, pricing strategies, and ad campaigns to maximize your online sales.</p>
-            </div>
-            <div class="card" data-aos="fade-up" data-aos-delay="80">
+            </a>
+
+            <!-- Branding -->
+            <a href="branding-design.html" class="card" data-aos="fade-up" data-aos-delay="80">
                 <div class="card-icon"><i class="fas fa-pen-nib"></i></div>
                 <h3>Logo & Brand Design</h3>
                 <p>We create professional logos and complete brand identity packages that reflect your business values and make you look credible and trustworthy to customers.</p>
-            </div>
-            <div class="card" data-aos="fade-up" data-aos-delay="160">
+            </a>
+
+            <!-- App Design -->
+            <a href="app-design.html" class="card" data-aos="fade-up" data-aos-delay="160">
                 <div class="card-icon"><i class="fas fa-mobile-screen-button"></i></div>
                 <h3>App UI/UX Design</h3>
                 <p>We design clean, user-friendly app interfaces and prototypes that offer great user experience — making it easier to present your app idea to investors or developers.</p>
-            </div>
-            <div class="card" data-aos="fade-up" data-aos-delay="240">
+            </a>
+
+            <!-- Business Strategy -->
+            <a href="bussinees-strategy.html" class="card" data-aos="fade-up" data-aos-delay="240">
                 <div class="card-icon"><i class="fas fa-chart-line"></i></div>
                 <h3>Business Growth Strategy</h3>
                 <p>We work with you to build a custom digital growth plan — identifying the right channels, audience, and content strategy to scale your Agra business effectively.</p>
-            </div>
+            </a>
+
         </div>
     </section>
 
-    <!-- About -->
     <section id="about">
         <div data-aos="fade-up">
             <p class="section-label">Who We Are</p>
@@ -752,7 +753,6 @@
         </div>
     </section>
 
-    <!-- Why Us -->
     <section id="why">
         <div data-aos="fade-up">
             <p class="section-label">Why Choose Us</p>
@@ -785,7 +785,6 @@
         </div>
     </section>
 
-    <!-- Contact -->
     <section id="contact">
         <div data-aos="fade-up">
             <p class="section-label">Get In Touch</p>
@@ -843,7 +842,6 @@
             <div class="contact-form" data-aos="fade-left">
                 <h3>Send Us a Message</h3>
                 <form action="https://formspree.io/f/mqkrpvyv" method="POST">
-                    <!-- Honeypot - hidden from users, traps bots -->
                     <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off">
 
                     <div class="form-group">
@@ -889,7 +887,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>© 2026 TheGiggle | Digital Marketing Agency, Agra</p>
         <div class="footer-links">
@@ -905,10 +902,8 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Init AOS
         AOS.init({ duration: 800, once: true, offset: 60 });
 
-        // Mobile menu toggle
         function toggleMenu() {
             const nav = document.getElementById('navLinks');
             const ham = document.getElementById('hamburger');
@@ -916,7 +911,6 @@
             ham.classList.toggle('active');
         }
 
-        // Close mobile menu on link click
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 document.getElementById('navLinks').classList.remove('open');
@@ -924,13 +918,11 @@
             });
         });
 
-        // Nav shrink on scroll
         window.addEventListener('scroll', () => {
             const nav = document.getElementById('navbar');
             nav.style.padding = window.scrollY > 50 ? '12px 8%' : '18px 8%';
         });
 
-        // Form submission feedback
         const form = document.querySelector('form');
         if (form) {
             form.addEventListener('submit', function(e) {
