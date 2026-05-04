@@ -28,7 +28,6 @@
       "url": "https://thegiggle6-afk.github.io/Thegiggleads/",
       "telephone": "+919193738863",
       "email": "ajaydd111@gmail.com",
-      "description": "TheGiggle is Agra's premier digital marketing agency specializing in SEO, web design, social media marketing, and e-commerce growth.",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "03 Manubhihar Colony, Dehtora",
@@ -125,6 +124,15 @@
         .hero h1 { font-family: 'Syncopate', sans-serif; font-size: clamp(2.2rem, 9vw, 6rem); line-height: 1.05; margin-bottom: 24px; }
         .hero h1 span { color: var(--primary); text-shadow: 0 0 40px var(--primary); }
 
+        .stats-row {
+            display: flex; gap: 40px; justify-content: center; flex-wrap: wrap;
+            margin-top: 60px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .stat { text-align: center; }
+        .stat-num { font-family: 'Syncopate', sans-serif; font-size: 2rem; color: var(--primary); display: block; }
+        .stat-label { font-size: 0.72rem; color: var(--text-muted); letter-spacing: 2px; text-transform: uppercase; }
+
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 50px; }
 
         .card {
@@ -143,6 +151,11 @@
 
         @keyframes floatIcon { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 
+        /* FOUNDER SECTION */
+        .about-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 60px; align-items: center; margin-top: 20px; }
+        .about-img { width: 100%; border-radius: 20px; border: 2px solid rgba(0,242,255,0.4); box-shadow: 0 0 40px rgba(0,242,255,0.15); animation: floatImg 6s ease-in-out infinite; }
+        @keyframes floatImg { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+
         .btn { padding: 15px 36px; border-radius: 50px; font-weight: 700; text-decoration: none; display: inline-block; transition: 0.4s; }
         .btn-primary { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #fff; border: none; }
 
@@ -155,6 +168,7 @@
 
         footer { padding: 30px 10%; border-top: 1px solid rgba(255,255,255,0.06); text-align: center; }
 
+        @media (max-width: 900px) { .about-grid { grid-template-columns: 1fr; } }
         @media (max-width: 768px) { .nav-links { display: none; } }
     </style>
 </head>
@@ -172,6 +186,7 @@
         <a href="#home" class="logo">THEGIGGLE</a>
         <div class="nav-links">
             <a href="#services">Services</a>
+            <a href="#about">About</a>
             <a href="#contact" class="nav-cta">Get a Quote</a>
         </div>
     </nav>
@@ -181,6 +196,13 @@
             <h1>GROW YOUR BRAND<br><span>DIGITALLY</span></h1>
             <p style="color: var(--text-muted); max-width: 500px; margin: 20px auto;">Agra's premium agency for 3D Web Design & SEO growth.</p>
             <a href="#contact" class="btn btn-primary">Work With Us</a>
+        </div>
+
+        <div class="stats-row" data-aos="fade-up">
+            <div class="stat"><span class="stat-num">50+</span><span class="stat-label">Projects Done</span></div>
+            <div class="stat"><span class="stat-num">150+</span><span class="stat-label">Happy Customers</span></div>
+            <div class="stat"><span class="stat-num">75+</span><span class="stat-label">3D Websites</span></div>
+            <div class="stat"><span class="stat-num">24/7</span><span class="stat-label">Support</span></div>
         </div>
     </section>
 
@@ -197,6 +219,51 @@
                 <h3>3D Web Design</h3>
                 <p>Immersive websites with 3D animations that leave a lasting impression.</p>
             </a>
+            <a href="social-media.html" class="card" data-aos="fade-up" data-aos-delay="200">
+                <div class="card-icon"><i class="fas fa-bullhorn" style="color:var(--primary)"></i></div>
+                <h3>Social Media Marketing</h3>
+                <p>Strategic management and paid ads for Facebook & Instagram growth.</p>
+            </a>
+            <a href="video-content.html" class="card" data-aos="fade-up" data-aos-delay="300">
+                <div class="card-icon"><i class="fas fa-clapperboard" style="color:var(--primary)"></i></div>
+                <h3>Reels & Video Content</h3>
+                <p>Scroll-stopping viral content produced specifically for your brand.</p>
+            </a>
+            <a href="e-commerce-growth.html" class="card" data-aos="fade-up">
+                <div class="card-icon"><i class="fas fa-shop" style="color:var(--primary)"></i></div>
+                <h3>E-commerce Growth</h3>
+                <p>Scale your sales on Meesho and Amazon with expert optimization.</p>
+            </a>
+            <a href="branding-design.html" class="card" data-aos="fade-up" data-aos-delay="100">
+                <div class="card-icon"><i class="fas fa-pen-nib" style="color:var(--primary)"></i></div>
+                <h3>Logo & Brand Design</h3>
+                <p>Professional brand identity that makes your business look credible.</p>
+            </a>
+            <a href="app-design.html" class="card" data-aos="fade-up" data-aos-delay="200">
+                <div class="card-icon"><i class="fas fa-mobile-screen-button" style="color:var(--primary)"></i></div>
+                <h3>App UI/UX Design</h3>
+                <p>Modern and user-friendly app interfaces for a great experience.</p>
+            </a>
+            <a href="bussinees-strategy.html" class="card" data-aos="fade-up" data-aos-delay="300">
+                <div class="card-icon"><i class="fas fa-chart-line" style="color:var(--primary)"></i></div>
+                <h3>Business Strategy</h3>
+                <p>Custom digital growth plans to scale your Agra business effectively.</p>
+            </a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-grid">
+            <div data-aos="fade-right">
+                <img src="my-photo.jpg" class="about-img" alt="Ajay Sikarwar - Founder TheGiggle">
+            </div>
+            <div data-aos="fade-left">
+                <h2 style="font-family: 'Syncopate'; margin-bottom: 20px;">AJAY <span>SIKARWAR</span></h2>
+                <p style="color: var(--text-muted); line-height: 1.8;">Founder of TheGiggle, specializing in taking Agra's local brands to a national audience through futuristic tech and digital asset management.</p>
+                <div style="margin-top: 24px;">
+                    <a href="https://instagram.com/mr_ajaysikarwar" target="_blank" class="btn btn-primary">Follow on Instagram</a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -221,7 +288,7 @@
     <script>
         AOS.init({ duration: 800, once: true });
         particlesJS('particles-js', {
-            "particles": { "number": { "value": 50 }, "color": { "value": "#ffffff" }, "opacity": { "value": 0.2 }, "move": { "enable": true, "speed": 1 } }
+            "particles": { "number": { "value": 70 }, "color": { "value": "#00f2ff" }, "opacity": { "value": 0.2 }, "line_linked": { "color": "#00f2ff", "opacity": 0.1 }, "move": { "enable": true, "speed": 1.5 } }
         });
     </script>
 </body>
